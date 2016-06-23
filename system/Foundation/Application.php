@@ -867,7 +867,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
      */
     public function getProviderRepository()
     {
-        $path = APPDIR .'Storage';
+        $path = $this['path.storage'];
 
         return new ProviderRepository($path);
     }
